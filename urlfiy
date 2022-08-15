@@ -1,0 +1,21 @@
+class Urlify 
+{
+	public static void main(String[] args) 
+	{
+		String s="my pancake is over";
+		char[] ch=s.toCharArray();
+		StringBuilder sb=new StringBuilder();
+			for(char c:ch)
+		{
+			if(c!=' ')
+			{
+				sb.append(c);
+			}
+			else
+			{
+				sb.append("%20");
+			}
+		}
+		System.out.println(sb.toString());
+	}
+}
