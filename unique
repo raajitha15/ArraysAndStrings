@@ -1,0 +1,32 @@
+import java.util.*;
+class Unique 
+{
+	public static boolean uniquecharacter(String str)
+	{
+		char[] ch=str.toCharArray();
+		Arrays.sort(ch);
+		for(int i=1;i<ch.length;++i)
+		{
+			if(ch[i]==ch[i-1])
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static void main(String[] args) 
+	{
+		
+		String s="do or die";
+		if(uniquecharacter(s))
+		{
+			System.out.println("does not have");
+		}
+		else
+		{
+		  System.out.println("the string  have all unique characters ");
+		}
+		
+	}
+}
